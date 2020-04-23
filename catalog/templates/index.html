@@ -1,0 +1,25 @@
+﻿{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 style="color:blue;">Local Library Home</h1>
+
+<p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+
+<h2 style="color:DodgerBlue;">Dynamic content</h2>
+<p>The library has the following record counts:</p>
+
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><strong>Books:</strong> {{ num_books }}</li>
+
+<li><strong >Copies:</strong> {{ num_instances }}</li>
+<li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+<li><strong>Authors:</strong> {{ num_authors }}</li>
+</ul>
+<p style="color:blue">You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}</p>
+{% load static %}
+ <img src="{% static 'catalog/images/122.jpg' %}" alt="UML diagram"
+style="width:1050px;height:200px;">
+<p><h3 style= "color:red">All Cope Reseved @ MAHMOUD-MMa1! Vresion 2020</h3></p>
+{% endblock %}
+

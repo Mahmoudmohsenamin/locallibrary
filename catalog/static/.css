@@ -1,0 +1,7 @@
+﻿<!-- Add additional CSS in static file -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+ You can add an image into the page in a similar way, for example:
+ {% load static %}
+ <img src="{% static 'catalog/images/7.jpg' %}" alt="UML diagram"
+style="width:555px;height:540px;">
